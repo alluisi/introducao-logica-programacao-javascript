@@ -5,7 +5,7 @@ for (let controle = 7; controle >= 3; controle--)
 
 /* resposta do professor
 for (let i = 7; i >= 3; i--) {
-    console.log(controle);
+    console.log(i);
 }
 i -> index (comum usar para controlar laço)
 */
