@@ -1,4 +1,4 @@
-let nota = 11.7;
+let nota = 12.7;
 
 // Match.ceil -> arredonda o valor para cima
 // Match.floor -> arredonda o valor para cima

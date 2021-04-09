@@ -5,7 +5,7 @@ for(let i = 1; i <= 5; i++){
     console.log(i);
 } // 1 2
 
-// continue ele vai "pular a excessão" e continuar o laço
+// continue ele vai "pular a exceção" e continuar o laço
 for(let i = 1; i <= 5; i++){
     if(i === 3)
     continue;

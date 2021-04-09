@@ -13,7 +13,6 @@ F -> 0
 */
 
 let nota = 8.7;
-
 switch (Math.ceil(nota)) {
     case 10:
         console.log('A+');
@@ -51,10 +50,11 @@ switch (Math.ceil(nota)) {
     default:
         console.log('Nota inválida!');
 }
+
 /*
 resposta do professor:
-const conceito = 'C+';
 
+const conceito = 'C+';
 switch (conceito) {
     case 'A+': console.log(10); break;
     case 'A': console.log(9); break;
