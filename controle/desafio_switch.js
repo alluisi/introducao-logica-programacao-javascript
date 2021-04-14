@@ -13,6 +13,7 @@ F -> 0
 */
 
 let nota = 8.7;
+
 switch (Math.ceil(nota)) {
     case 10:
         console.log('A+');
