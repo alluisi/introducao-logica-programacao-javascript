@@ -2,7 +2,7 @@ const produto = {
     nome: 'iPad',
     preco: 5600,
     desconto: 0.5,
-    precoComDesconto: function() {
+    precoComDesconto: function () {
         return this.preco * (1 - this.desconto);
     }
 };
