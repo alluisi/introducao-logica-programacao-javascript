@@ -7,7 +7,7 @@ maiorOuIgual(0, "0") // retornará false
 maiorOuIgual(5, 1) // retornará true
 */
 function maiorOuIgual(n1, n2) {
-    if (n1 >= n2 && typeof n1 === typeof n2)
+    if (n1 >= n2 && typeof n1 == typeof n2)
         return true
     else
         return false
