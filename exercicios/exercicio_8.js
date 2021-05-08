@@ -8,8 +8,8 @@ multiplicar(0, 7) // retornará 0
 */
 function multiplicar(n1, n2) {
     let soma = 0
-        for(let i = 0; i < n2; i++)
-    soma += n1
+    for (let i = 0; i < n2; i++)
+        soma += n1
     return soma
 }
 

@@ -30,19 +30,31 @@ função Object.is(), por exemplo:
 */
 
 function removerPropriedade(objeto, propriedade) {
-    
-    return 
+    const copia = Object.assign({}, objeto)
+    delete copia[propriedade]
+
+    return copia
 }
 
-console.log(removerPropriedade({a: 1, b: 2}, "a"));
+console.log(removerPropriedade({ a: 1, b: 2 }, "a"));
 console.log(removerPropriedade({
     id: 20,
     nome: "caneta",
     descricao: "Não preenchido"
-    }, "descricao"));
+}, "descricao"));
 
 /*
-resposta do professor:
+Obs.: Essa eu não consegui sozinha :(
+    Resolvi deixar uma das respostas do professor pois, acabei de descobrir a
+    funcionalidade do método assing ;)
+    (method) ObjectConstructor.assign<T, U>(target: T, source: U): T & U (+3 overloads)
 
+Resposta do professor:
 
+function removerPropriedade(objeto, nomeDaPropriedade) {
+    const copia = {...objeto}
+    delete copia[nomeDaPropriedade]
+    
+    return copia
+}
 */
