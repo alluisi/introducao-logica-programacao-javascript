@@ -13,16 +13,35 @@ checarAnoBissexto(2100)
 // retornará false, pois é múltiplo de 100 e não é múltiplo de 400
 */
 
-function checarAnoBissexto(parametro) {
-    
-    return 
+function checarAnoBissexto(ano) {
+    if (ano % 400 === 0) {
+        return true
+    } else if ((ano % 4 === 0) && (ano % 100 !== 0)) {
+        return true
+    } else {
+        return false
+    }
 }
 
-console.log(checarAnoBissexto(2020);
-console.log(checarAnoBissexto(2100);
+console.log(checarAnoBissexto(2020));
+console.log(checarAnoBissexto(2100));
 
 /*
-Resposta do professor:
+Respostas do professor:
 
+Resolução 1:
+function checarAnoBissexto(ano) {
+    const divisivelPorQuatro = ano % 4 == 0
+    const divisivelPorCem = ano % 100 == 0
+    const divisivelPorQuatrocentos = ano % 400 == 0
+    
+    return (divisivelPorQuatro && !divisivelPorCem) || divisivelPorQuatrocentos
+}
 
+Resolução 2:
+// checa-se indiretamente, verificando se o mês de fevereiro do dado ano tem 29 dias
+
+function checarAnoBissexto(ano) {
+    return new Date(ano, 1, 29).getDate() === 29;
+}
 */
