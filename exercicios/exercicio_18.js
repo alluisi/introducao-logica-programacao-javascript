@@ -18,22 +18,45 @@ despesasTotais([
 ]) // retornará 34599.89
 */
 
-function despesasTotais(parametro) {
-    
-    return 
+function despesasTotais(produtos) {
+    let soma = 0;
+
+    for (let item of produtos) {
+        soma += item.preco
+    }
+    return soma
 }
 
 console.log(despesasTotais([
     {nome: "Jornal online", categoria: "Informação", preco: 89.99},
     {nome: "Cinema", categoria: "Entretenimento", preco: 150}
-]);
+]));
 console.log(despesasTotais([
     {nome: "Galaxy S20", categoria: "Eletrônicos", preco: 3599.99},
     {nome: "Macbook Pro", categoria: "Eletrônicos", preco: 30999.90}
-]);
+]));
 
 /*
-Resposta do professor:
+Respostas do professor:
 
+Resolução 1:
+function despesasTotais(itens) {
+    var total = 0
+    for (let item of itens)
+    total += item.preco
+    return total
+}
 
+Resolução 2:
+function despesasTotais(itens) {
+    return itens
+    .map(item => item.preco)
+    .reduce((acumulador, valorAtual) => acumulador + valorAtual)
+}
+Obs.: Estudar
+
+Resolução 3:
+function despesasTotais(itens) {
+    return itens.reduce((acumulador, valorAtual) => acumulador + valorAtual.preco, 0)
+}
 */
