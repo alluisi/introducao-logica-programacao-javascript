@@ -12,18 +12,26 @@ buscarPalavrasSemelhantes("java", ["javascript", "java", "c++"])
 // retornará ["javascript", "java"]
 */
 
-function buscarPalavrasSemelhantes(parametro) {
-    
-    return 
+function buscarPalavrasSemelhantes(palavra, frase) {
+    let semelhantes = [];
+
+    for (let item of frase) {
+        if (item.includes(palavra)) {
+            semelhantes.push(item)
+        }
+    }
+    return semelhantes
 }
 
 console.log(buscarPalavrasSemelhantes
-    ("pro", ["programação", "mobile", "profissional"]);
+    ("pro", ["programação", "mobile", "profissional"]));
 console.log(buscarPalavrasSemelhantes
-    ("java", ["javascript", "java", "c++");
+    ("java", ["javascript", "java", "c++"]));
 
 /*
 Resposta do professor:
 
-
+function buscarPalavrasSemelhantes(inicio, palavras) {
+    return palavras.filter(palavra => palavra.includes(inicio))
+}
 */
